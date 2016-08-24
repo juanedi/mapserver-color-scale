@@ -79,7 +79,7 @@ function main() {
 
   if (output == "values") {
     scaleInstance = scale.range([0, 1000]);
-    console.log(points.map(p => scaleInstance(p[0])));
+    console.log(points.map(p => [p[0], scaleInstance(p[0])]));
   } else if (output == "css") {
     console.log(cssRule(scale));
   } else if (output == "config") {
